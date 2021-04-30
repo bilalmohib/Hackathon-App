@@ -214,15 +214,22 @@ class Login extends React.Component {
                         <CardItem>
                             <Body>
                                 <Body>
-                     
+
                                     <Icon.Button name="facebook" backgroundColor="#3b5998" size={25}
                                         onPress={() => this.onFacebookButtonPress().then(() => console.log('Signed in with Facebook!'))}>
-                                        <Text style={{ fontFamily: 'Arial', fontSize: 20,color:"white" }}>
+                                        <Text style={{ fontFamily: 'Arial', fontSize: 20, color: "white" }}>
                                             Login with Facebook
                                         </Text>
                                     </Icon.Button>
+                                    <Text>Note: The Facebook Login is intended for both the students and the companies.The settings is handled at the backend.</Text>
                                     <Text></Text>
-                                    <Text></Text>
+                                   
+                                    <Icon.Button onPress={styles.admin} name="cog" backgroundColor="#d9534f" size={25}
+                                        onPress={() => this.props.navigation.navigate('AdminLogin')}>
+                                        <Text style={{ fontFamily: 'Arial', fontSize: 20, color: "white" }}>
+                                            Admin Login
+                                        </Text>
+                                    </Icon.Button>
                                     <Text></Text>
                                     <Text></Text>
                                     <Text></Text>
@@ -250,6 +257,9 @@ const styles = StyleSheet.create({
         fontStyle: 'italic',
         fontSize: 30,
         textAlign: 'center'
+    },
+    admin: {
+        fontSize: 25
     }
 });
 

@@ -20,7 +20,8 @@ import StudentHome from "../Components/StudentHome";
 import CompanyHome from "../Components/CompanyHome";
 import PostJob from "../Components/PostJob";
 import JobsList from "../Components/JobsList";
-
+import AdminLogin from "../Components/AdminLogin";
+import AdminPage from "../Components/AdminPage";
 // All the components imoprt is here
 
 import { NavigationContainer } from '@react-navigation/native';
@@ -51,6 +52,11 @@ function Navigate() {
         <Stack.Screen name="StudentDetailsPage" component={StudentDetailsPage} />
 
         <Stack.Screen name="JobDetailsPage" component={JobDetailsPage} />
+        <Stack.Screen name="AdminLogin" component={AdminLogin} />
+
+        <Stack.Screen name="AdminPage" component={AdminPage} />
+
+        
 
       </Stack.Navigator>
     </NavigationContainer>
